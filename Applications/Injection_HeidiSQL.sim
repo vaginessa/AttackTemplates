@@ -1,0 +1,25 @@
+	<SessionTemplate>
+<Config name="injection_heidisql" description="Injecting into HeidiSQL update request">
+</Config>
+
+<Plugins>
+<Plugin name="HTTP inject" dirname="HTTPInject">
+
+<ArrayOfInjectedURLRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <InjectedURLRecord>
+    <Type>Redirect</Type>
+    <RequestedHost>www.heidisql.com</RequestedHost>
+    <RequestedURL>/installers/HeidiSQL_8.3.0.4694_Setup.exe</RequestedURL>
+    <InjectedHost>buglist.io</InjectedHost>
+    <InjectedURL>/images/lookinggood.jpg</InjectedURL>
+    <InjectedFileFullPath />
+  </InjectedURLRecord>
+</ArrayOfInjectedURLRecord>
+</Plugin>
+
+
+
+
+</Plugins>
+
+</SessionTemplate>

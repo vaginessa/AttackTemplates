@@ -8,11 +8,11 @@
 <ArrayOfDNSPoisonRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <DNSPoisonRecord>
     <HostName>your.hispeed.ch</HostName>
-    <IPAddress>192.168.43.133</IPAddress>
+    <IPAddress>@LOCALIP</IPAddress>
   </DNSPoisonRecord>
   <DNSPoisonRecord>
     <HostName>www.upc-cablecom.ch</HostName>
-    <IPAddress>192.168.43.133</IPAddress>
+    <IPAddress>@LOCALIP</IPAddress>
   </DNSPoisonRecord>
 </ArrayOfDNSPoisonRecord>
 </Plugin>

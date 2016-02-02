@@ -9,15 +9,15 @@
 <ArrayOfDNSPoisonRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <DNSPoisonRecord>
     <HostName>netbanking.bcge.ch</HostName>
-    <IPAddress>192.168.43.133</IPAddress>
+    <IPAddress>@LOCALIP</IPAddress>
   </DNSPoisonRecord>
   <DNSPoisonRecord>
     <HostName>www.bcge.ch</HostName>
-    <IPAddress>192.168.43.133</IPAddress>
+    <IPAddress>@LOCALIP</IPAddress>
   </DNSPoisonRecord>
   <DNSPoisonRecord>
     <HostName>bcge.ch</HostName>
-    <IPAddress>192.168.43.133</IPAddress>
+    <IPAddress>@LOCALIP</IPAddress>
   </DNSPoisonRecord>
 </ArrayOfDNSPoisonRecord>
 </Plugin>

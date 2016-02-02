@@ -11,15 +11,15 @@
 <ArrayOfDNSPoisonRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <DNSPoisonRecord>
     <HostName>ebanking.bkb.ch</HostName>
-    <IPAddress>192.168.43.133</IPAddress>
+    <IPAddress>@LOCALIP</IPAddress>
   </DNSPoisonRecord>
   <DNSPoisonRecord>
     <HostName>www.bkb.ch</HostName>
-    <IPAddress>192.168.43.133</IPAddress>
+    <IPAddress>@LOCALIP</IPAddress>
   </DNSPoisonRecord>
   <DNSPoisonRecord>
     <HostName>bkb.ch</HostName>
-    <IPAddress>192.168.43.133</IPAddress>
+    <IPAddress>@LOCALIP</IPAddress>
   </DNSPoisonRecord>
 </ArrayOfDNSPoisonRecord>
 </Plugin>

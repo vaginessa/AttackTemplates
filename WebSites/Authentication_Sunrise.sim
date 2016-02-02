@@ -9,15 +9,15 @@
 <ArrayOfDNSPoisonRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <DNSPoisonRecord>
     <HostName>www1.sunrise.ch</HostName>
-    <IPAddress>192.168.43.133</IPAddress>
+    <IPAddress>@LOCALIP</IPAddress>
   </DNSPoisonRecord>
   <DNSPoisonRecord>
     <HostName>sunrise.ch</HostName>
-    <IPAddress>192.168.43.133</IPAddress>
+    <IPAddress>@LOCALIP</IPAddress>
   </DNSPoisonRecord>
   <DNSPoisonRecord>
     <HostName>mip.sunrise.ch</HostName>
-    <IPAddress>192.168.43.133</IPAddress>
+    <IPAddress>@LOCALIP</IPAddress>
   </DNSPoisonRecord>
 </ArrayOfDNSPoisonRecord>
 </Plugin>

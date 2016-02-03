@@ -1,5 +1,6 @@
 	<SessionTemplate>
-<Config name="authentication_BKB" description="Intercepting BKB authentication procedure">
+<Config name="authentication_BKB" description="Intercepting BKB authentication procedure" date="2016-02-03">
+<Author name="Simsang" reference="http://buglist.io/" />
 </Config>
 
 

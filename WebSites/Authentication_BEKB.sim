@@ -1,5 +1,6 @@
 	<SessionTemplate>
-<Config name="authentication_BEKB" description="Intercepting BEKB authentication procedure">
+<Config name="authentication_BEKB" description="Intercepting BEKB authentication procedure" date="2016-02-03">
+<Author name="Simsang" reference="http://buglist.io/" />
 </Config>
 <Plugins>
 <Plugin name="DNS Poisoning" dirname="DNSPoisoning">

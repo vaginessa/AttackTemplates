@@ -1,5 +1,6 @@
 	<SessionTemplate>
-<Config name="authentication_autoscout24" description="Intercepting Autoscout24 authentication procedure">
+<Config name="authentication_autoscout24" description="Intercepting Autoscout24 authentication procedure" date="2016-02-03">
+<Author name="Simsang" reference="http://buglist.io/" />
 </Config>
 
 <Plugins>

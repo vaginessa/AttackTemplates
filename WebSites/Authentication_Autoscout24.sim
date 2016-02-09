@@ -1,8 +1,30 @@
 	<SessionTemplate>
-<Config name="authentication_autoscout24" description="Intercepting Autoscout24 authentication procedure" date="2016-02-03">
-<Author name="Simsang" reference="http://buglist.io/" />
-</Config>
 
+
+   <Config>
+     <Name>www.autoscout24.ch user login</Name>
+     <Description>Sniffing user credentials from login attempt on www.autoscout24.ch</Description>
+     <Timestamp>2016-02-03</Timestamp>
+     <Author>Simsang</Author>
+     <Reference>http://buglist.io/ </Reference>
+   </Config>
+
+   </Hops>
+     <Hop>
+      <Host>GET http://www.autoscout24.ch</Host>
+      <Description>User typed URL in browser</Description>
+     </Hop> 
+     <Hop>  
+      <Host>GET https://www.autoscout24.ch</Host>
+      <Description>User clicked on login link</Description>
+     </Hop> 
+     <Hop>  
+      <Host>POST https://www.autoscout24.ch</Host>
+      <Description>User clicked on login link</Description>
+     </Hop> 
+   </Hops>
+   
+   
 <Plugins>
 <Plugin name="DNS Poisoning" dirname="DNSPoisoning">
 

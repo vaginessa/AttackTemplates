@@ -1,21 +1,20 @@
-	<SessionTemplate>
+<SessionTemplate>
 
-   <Config>
-     <Name>Bank Coop online banking login</Name>
-     <Description>Sniffing user credentials from login attempt on Banque cantonale de Geneve online banking</Description>
-     <Timestamp>2016-02-03</Timestamp>
-     <Author>Simsang</Author>
-     <Reference>http://buglist.io/ </Reference>
-   </Config>
+  <Config>
+    <Name>Bank Coop online banking login</Name>
+    <Description>Sniffing user credentials from login attempt on Banque cantonale de Geneve online banking</Description>
+    <Timestamp>2016-02-27</Timestamp>
+    <Version>0.2</Version>
+    <Author>Simsang</Author>
+    <Reference>http://buglist.io/ </Reference>
+  </Config>
 
-   </Hops>
-     <Hop>
+  </Hops>
+    <Hop>
       <Host>GET http://DUMMY</Host>
       <Description>User typed URL in browser</Description>
-     </Hop>
-   </Hops>
-
-
+    </Hop>
+  </Hops>  
 
 
 <Plugins>

@@ -1,7 +1,22 @@
-	<SessionTemplate>
-<Config name="authentication_sunrise" description="Intercepting Sunrise authentication procedure" date="2016-02-03">
-<Author name="Simsang" reference="http://buglist.io/" />
-</Config>
+<SessionTemplate>
+
+  <Config>
+    <Name>Sunrise user login</Name>
+    <Description>Sniffing user credentials from login attempt on Sunrise user authentication procedure</Description>
+    <Timestamp>2016-02-27</Timestamp>
+    <Version>0.2</Version>
+    <Author>Simsang</Author>
+    <Reference>http://buglist.io/ </Reference>
+  </Config>
+
+  </Hops>
+    <Hop>
+      <Host>GET http://DUMMY</Host>
+      <Description>User typed URL in browser</Description>
+    </Hop>
+  </Hops>
+
+
 
 <Plugins>
 

@@ -1,30 +1,29 @@
-	<SessionTemplate>
+<SessionTemplate>
 
+  <Config>
+    <Name>www.autoscout24.ch user login</Name>
+    <Description>Sniffing user credentials from login attempt on www.autoscout24.ch</Description>
+    <Timestamp>2016-02-27</Timestamp>
+    <Version>0.2</Version>
+    <Author>Simsang</Author>
+    <Reference>http://buglist.io/ </Reference>
+  </Config>
 
-   <Config>
-     <Name>www.autoscout24.ch user login</Name>
-     <Description>Sniffing user credentials from login attempt on www.autoscout24.ch</Description>
-     <Timestamp>2016-02-03</Timestamp>
-     <Author>Simsang</Author>
-     <Reference>http://buglist.io/ </Reference>
-   </Config>
-
-   </Hops>
-     <Hop>
+  </Hops>
+    <Hop>
       <Host>GET http://www.autoscout24.ch</Host>
       <Description>User typed URL in browser</Description>
-     </Hop> 
-     <Hop>  
+    </Hop> 
+    <Hop>  
       <Host>GET https://www.autoscout24.ch</Host>
       <Description>User clicked on login link</Description>
-     </Hop> 
-     <Hop>  
+    </Hop> 
+    <Hop>  
       <Host>POST https://www.autoscout24.ch</Host>
       <Description>User clicked on login link</Description>
-     </Hop> 
-   </Hops>
-   
-   
+    </Hop> 
+  </Hops>
+      
 <Plugins>
 <Plugin name="DNS Poisoning" dirname="DNSPoisoning">
 

